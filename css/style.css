@@ -1,0 +1,15 @@
+body {
+    background-image: url(../img/lizgrin-f-lsQZfwPlKos-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Scritta per la ricerca */
+main div {
+    margin: 100px auto;
+    width:25%;
+}
+
+main h1 {
+    color: black;
+}
