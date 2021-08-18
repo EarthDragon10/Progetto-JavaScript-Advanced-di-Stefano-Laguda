@@ -15,47 +15,58 @@
 <body>
     <main>
 
-        <!-- Titolo -->
-        <div>
-            <h1>Enter city or country</h1>
-            <p>Check the air pollution in your city/country</p>
-        </div>
+        
+        <section class="src">
 
-        <!-- Form per la ricerca -->
-        <div>
+            <!-- Header -->
+            <header>
+                <h1>Enter city or country</h1>
+                <p>Check the air pollution in your city/country</p>
+            </header>
+
+            <!-- Sezione Form per la ricerca -->
             <form>
-              <input id="input" type="text" placeholder="Search for your city" />
-              <button id="btn" type="button">
-                <i class="fas fa-search"></i>
-              </button>
-              <button id="geo" type="button">
-                <i class="fas fa-map-marked-alt fa-5x"></i>
-              </button>
-            </form>
-          </div>
 
-        <!-- Cards con i risultati della ricerca -->
-        <div class="search">
-            <div class="search_section city">
-              <h3>City</h3>
-              <p id="city">Milan</p>
-            </div>
-            <div class="vl"></div>
-            <div class="search_section pm">
-              <h3>Fine dust grade</h3>
-              <p id="pm">85</p>
-            </div>
-            <div class="vl"></div>
-            <div class="search_section aqi">
-              <h3>Air quality index</h3>
-              <p id="aqi">85</p>
-            </div>
-            <div class="vl"></div>
-            <div class="search_section health">
-              <h3>Health note</h3>
-              <p id="health">Air quality is acceptable</p>
-            </div>
-          </div>
+                <input id="input" type="text" placeholder="Search for your city" />
+                <button id="btn" type="button">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button id="geo" type="button">
+                  <i class="fas fa-map-marked-alt"></i>
+                </button>
+
+              </form>
+
+        </section>
+            
+
+        <!-- Sezione per i risultati della ricerca -->
+        <section class="showRes">
+
+            <div class="search">
+                <div class="result-search city">
+                  <h3>City</h3>
+                  <p id="city">Milan</p>
+                </div>
+                <div class="line"></div>
+                <div class="result-search pm">
+                  <h3>Fine dust grade</h3>
+                  <p id="pm">85</p>
+                </div>
+                <div class="line"></div>
+                <div class="result-search aqi">
+                  <h3>Air quality index</h3>
+                  <p id="aqi">85</p>
+                </div>
+                <div class="line"></div>
+                <div class="result-search health">
+                  <h3>Health note</h3>
+                  <p id="health">Air quality is acceptable</p>
+                </div>
+              </div>
+
+        </section>
+        
         
     </main>
 </body>
