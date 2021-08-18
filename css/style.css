@@ -2,6 +2,7 @@ body {
     background-image: url(../img/lizgrin-f-lsQZfwPlKos-unsplash.jpg);
     background-size: cover;
     background-position: center;
+    margin: 0;
 }
 
 /* Scritta per la ricerca */
