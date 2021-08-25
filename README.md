@@ -31,7 +31,6 @@
 ### Project created with:
   - HTML5
   - CSS3
-  - BootStrap
   - JavaScript ES6
 
 
@@ -48,4 +47,4 @@
 ### No licence
 
 # Contact Information
-### E-mail: [laguda92@gmail.com](laguda92@gmail.com)
+### E-mail: [lagudadev@gmail.com](laguda92@gmail.com)
