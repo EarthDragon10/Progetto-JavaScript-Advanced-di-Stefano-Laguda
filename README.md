@@ -47,4 +47,4 @@
 ### No licence
 
 # Contact Information
-### E-mail: [lagudadev@gmail.com](laguda92@gmail.com)
+### E-mail: [lagudadev@gmail.com](lagudadev@gmail.com)
