@@ -1,26 +1,14 @@
 // ►►►► Sezione HTML realizzata con JavaScript ◄◄◄◄
 
-// 1. Sezione Creazione degli elementi HTML
+// 1. Creazione dell'Header
 
 let mainSite = document.createElement("main");
 let headerSite = document.createElement("header");
 let sectionSite = document.createElement("section");
-let formSite = document.createElement("form");
 
-// Elementi dell'header
 let h1 = document.createElement("h1");
 let p = document.createElement("p");
 
-// Elementi del Form
-let input = document.createElement("input");
-let btn = document.createElement("button");
-let iconItem = document.createElement("i");
-
-// Elementi che mostrano i risultati della ricerca
-let div = document.createElement("div");
-let h3 = document.createElement("h3");
-
-// 2. Costruzione dell'Header
 h1.innerHTML = "Enter city or country";
 p.innerHTML = "Check the air pollution in your city/country";
 
@@ -30,7 +18,104 @@ sectionSite.prepend(headerSite);
 headerSite.prepend(h1);
 h1.after(p);
 
+sectionSite.classList.add("src");
 
+// 2. Creazione del Form
+let formSite = document.createElement("form");
+let inputSite = document.createElement("input");
+let btnSearch = document.createElement("button");
+let btnGeo = btnSearch.cloneNode(false);
+let iconItemSearch = document.createElement("i");
+let iconItemGeo = iconItemSearch.cloneNode(false);
+
+headerSite.after(formSite);
+formSite.prepend(inputSite);
+inputSite.after(btnSearch);
+btnSearch.append(iconItemSearch);
+btnSearch.after(btnGeo);
+btnGeo.append(iconItemGeo);
+
+
+inputSite.setAttribute("id","input");
+inputSite.setAttribute("type","text");
+inputSite.setAttribute("placeholder", "Search for your city");
+
+btnSearch.setAttribute("id", "btn");
+btnSearch.setAttribute("type", "button");
+iconItemSearch.classList.add("fas");
+iconItemSearch.classList.add("fa-search");
+
+btnGeo.setAttribute("id", "geo");
+btnGeo.setAttribute("type", "button");
+iconItemGeo.classList.add("fas");
+iconItemGeo.classList.add("fa-map-marked-alt");
+
+// 3. Creazione della sezione che mostra i risultati della ricerca
+
+let sectionShow = sectionSite.cloneNode(false);
+
+let divSearch = document.createElement("div");
+
+let divCity = divSearch.cloneNode(false);
+let h3City = document.createElement("h3");
+let pCity = document.createElement("p");
+
+let divPM = divCity.cloneNode(false);
+let h3PM = document.createElement("h3");
+let pPM = document.createElement("p");
+
+let divAQI = divPM.cloneNode(false);
+let h3AQI = document.createElement("h3");
+let pAQI = document.createElement("p");
+
+let divHealth = divAQI.cloneNode(false);
+let h3Health = document.createElement("h3");
+let pHealth = document.createElement("p");
+
+let divLine1 = divSearch.cloneNode(false);
+divLine1.classList.add("line");
+let divLine2 = divLine1.cloneNode(true);
+let divLine3 = divLine2.cloneNode(true);
+
+sectionSite.after(sectionShow);
+sectionShow.classList.add("showRes");
+
+sectionShow.prepend(divSearch);
+divSearch.classList.add("search");
+
+divSearch.prepend(divCity);
+divCity.prepend(h3City);
+h3City.innerHTML = "City";
+h3City.after(pCity);
+pCity.setAttribute("id", "city");
+pCity.innerHTML = "Milan";
+
+divCity.after(divLine1);
+
+divLine1.after(divPM);
+divPM.prepend(h3PM);
+h3PM.innerHTML = "Fine dust grade";
+h3PM.after(pPM);
+pPM.setAttribute("id", "pm");
+pPM.innerHTML = "85";
+
+divPM.after(divLine2);
+
+divLine2.after(divAQI);
+divAQI.prepend(h3AQI);
+h3AQI.innerHTML = "Air quality index";
+h3AQI.after(pAQI);
+pAQI.setAttribute("id", "aqi");
+pAQI.innerHTML = "85";
+
+divAQI.after(divLine3);
+
+divLine3.after(divHealth);
+divHealth.prepend(h3Health);
+h3Health.innerHTML = "Health note";
+h3Health.after(pHealth);
+pHealth.setAttribute("id", "health");
+pHealth.innerHTML = "Moderate";
 
 
 
